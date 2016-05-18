@@ -26,11 +26,11 @@ const renderVmWithOptions = (options, cb) => {
 
 // app and components
 import AppOptions from '../common/app';
-import Commits from '../common/commits';
-import Commit from '../common/commit';
+import CommitsOptions from '../common/commits';
+import CommitOptions from '../common/commit';
 
-const commits = Vue.component('commits', compileTemplateWithOptions(Commits.options));
-const commit = Vue.component('commit', compileTemplateWithOptions(Commit.options));
+const commits = Vue.component('commits', compileTemplateWithOptions(CommitsOptions));
+const commit = Vue.component('commit', compileTemplateWithOptions(CommitOptions));
 
 // data
 const apiUrl = 'https://api.github.com/repos/vuejs/vue/commits?per_page=3&sha=';

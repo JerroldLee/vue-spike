@@ -1,4 +1,9 @@
+import Commits from './commits';
+
 export default {
+  components: {
+    Commits
+  },
   template: `
     <div>
       <h1>Latest Vue.js Commits</h1>
@@ -14,7 +19,7 @@ export default {
       <div v-if="errorMessage">{{ errorMessage }}</div>
       <commits
         :current-branch="currentBranch"
-        :apiUrl="apiUrl"
+        :api-url="apiUrl"
         :commits="commits">
       </commits>
     </div>`

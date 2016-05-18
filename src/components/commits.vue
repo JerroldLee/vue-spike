@@ -1,13 +1,14 @@
-import Commit from './commit';
+<template>
+  <ul>
+    <commit v-for="commit in commits" :commit="commit"></commit>
+  </ul>
+</template>
+
+<script>
+import Commit from './commit.vue';
 
 export default {
   props: ['currentBranch', 'apiUrl', 'commits'],
-
-  template: `
-    <ul>
-      <commit v-for="commit in commits" :commit="commit"></commit>
-    </ul>
-  `,
 
   watch: {
     currentBranch: 'fetchData'
@@ -32,4 +33,5 @@ export default {
       xhr.send();
     }
   }
-};
+}
+</script>

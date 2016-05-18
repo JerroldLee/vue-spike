@@ -1,6 +1,4 @@
-import Vue from '../../vue/vue.common.js';
-
-export default Vue.extend({
+export default {
   props: ['commit'],
 
   template: `
@@ -21,4 +19,4 @@ export default Vue.extend({
       return v.replace(/T|Z/g, ' ');
     }
   }
-});
+};
